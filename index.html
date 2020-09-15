@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js-clock</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    
+    
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Dancing Script', cursive;
+            opacity: .9;
+        }
+        body{
+            background-image: url(images/img4.jpg);
+            background-repeat: none;
+            background-size: 100% 100%;
+           
+            
+        }
+        .maindiv{
+            width:100%px;
+            height:100vh;
+        }
+        .clock{
+            color: #2e4247;
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size:50px;
+            font-weight: bold;
+
+
+            
+            padding: 5px 10px 5px 10px;
+        }
+      
+          
+
+
+    </style>
+</head>
+<body>
+    <div class="maindiv">
+        <h1 id="hour" class="clock"></h1>
+        
+    </div>
+    <script >
+        function showTime(){
+            var today = new Date();
+            var Hr = today.toLocaleTimeString();
+        
+            document.getElementById("hour").innerHTML=Hr;
+            setTimeout(showTime,1000);
+
+        }
+        showTime();
+    </script>
+    
+</body>
+</html>
+
